@@ -8,12 +8,9 @@ attr_reader :name, :wallet, :age, :drunkenness
     @age = age
     @drinks = []
     @drunkenness = 0
-    # TODO: USE DRUNK TRUE OR FALSE
-    # @alcohol_consumed = 0
-    # @drunk = false
   end
 
-  def check_money_for_drink(drink)
+  def check_enough_money_to_purchase(drink)
     return @wallet >= drink.price
   end
 
@@ -25,6 +22,7 @@ attr_reader :name, :wallet, :age, :drunkenness
     return @drinks.push(drink)
   end
 
+#naming not true here as applys to food too
   def decrease_wallet(drink)
     return @wallet -= drink.price
   end
@@ -32,4 +30,10 @@ attr_reader :name, :wallet, :age, :drunkenness
   def increase_drunkenness(drink)
     return @drunkenness += drink.alcohol_level
   end
+
+  # def check_money_for_food(food)
+  #   return @wallet >= food.price
+  # end
+
+
 end

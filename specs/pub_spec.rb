@@ -100,7 +100,7 @@ class TestPub < Minitest::Test
     assert_equal(true, customer_old_enough)
   end
 
-  def test_customer_is_old_enough_to_drink
+  def test_customer_is_not_old_enough_to_drink
     customer_not_old_enough = @pub.check_minimum_age(@customer3)
     assert_equal(false, customer_not_old_enough)
   end
